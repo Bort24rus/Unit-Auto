@@ -6,10 +6,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Contact Us</h1>
+            <h1>Контакты</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active">Contact Us</li>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li class="active">Контакты</li>
             </ul>
         </div>
     </div>
@@ -21,8 +21,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title text-center">
-            <h1>Contact <span>Us</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <h1>Наши <span>Контакты</span></h1>
+            <p>Заполните эту простую форму и мы обязательно свяжемся и вместе подумаем, какой автомобиль подойдет именно вам.</p>
         </div>
         <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
             {% include 'includes/messages.html' %}
@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-md-6 text-left">
                             <div class="form-group name">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                                <input type="text" name="name" class="form-control" placeholder="Полное имя" required>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -42,22 +42,22 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group subject">
-                                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                <input type="text" name="subject" class="form-control" placeholder="Краткий вопрос" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group number">
-                                <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                <input type="text" name="phone" class="form-control" placeholder="Номер телефона">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group message">
-                                <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                                <textarea class="form-control" name="message" placeholder="Ваше сообщение"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="send-btn text-center">
-                                <button type="submit" class="btn btn-md button-theme">Send Message</button>
+                                <button type="submit" class="btn btn-md button-theme">Отправить сообщение</button>
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,8 @@
                                 <i class="flaticon-phone"></i>
                             </div>
                             <div class="detail">
-                                <h5>Phone:</h5>
-                                <p><a href="#">8318651126</a></p>
+                                <h5>Телефон:</h5>
+                                <p><a href="#">+7(923)XXX XXXX</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -79,26 +79,11 @@
                             </div>
                             <div class="detail">
                                 <h5>Email:</h5>
-                                <p><a href="#">raghavrastogi1990@gmail.com</a></p>
+                                <p><a href="#">TEST@gmail.com</a></p>
                             </div>
                         </div>
-                        <div class="ci-box">
-                            <div class="icon">
-                                <i class="flaticon-earth"></i>
-                            </div>
-                            <div class="detail">
-                                <h5>Web:</h5>
-                                <p><a href="#">www.carzonewebdev.com</a></p>
-                            </div>
-                        </div>
-                        <div class="ci-box mb-0">
-                            <div class="icon">
-                                <i class="flaticon-fax"></i>
-                            </div>
-                            <div class="detail">
-                                <h5>Fax:</h5>
-                                <p><a href="#">+05222788461</a></p>
-                            </div>
+
+
                         </div>
                     </div>
                 </div>

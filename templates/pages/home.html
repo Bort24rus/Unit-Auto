@@ -14,28 +14,26 @@
             <div class="carousel-item banner-max-height active item-bg">
                 <img class="d-block w-100 h-100" src="{% static  'img/car-1.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>Wow Factor Standard</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
-                    <a href="{% url 'services' %}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>15 лет на рынке</h3>
+                    <h5>Мы работаем на свою репутацию, поэтому делаем все возможное, <br>чтобы Вы были довольны результатом нашего сотрудничества. Мы хотим, чтобы Вы<br> стали нашим постоянным клиентом и рекомендовали нас своим <br>друзьям и деловым партнерам. Поэтому мы предлагаем самые высокие тарифы,<br> а также понятный и прозрачный механизм заключения сделки.</h5>
+                    <a href="{% url 'services' %}" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/car-2.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>Explore Your Dream Car</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
-                    <a  href="{% url 'services' %}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>Найди автомобиль своей мечты</h3>
+                    <h5>Мы продаём только проверенные по 78 пунктам автомобили.<vbr>
+                        Если вы не нашли то что искали, оставте заявку и мы найдём вам нужный автомобиль.</h5>
+                    <a  href="{% url 'services' %}" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/car-3.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>We Are Wheel</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
-                    <a  href="{% url 'services' %}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>Автомобили с пробегом</h3>
+                    <h5>Вы можете купить, продать, либо обменять свой автомобиль с пробегом. <br> Наши специалисты избавят Вас от проблем, связанных с поиском покупателей, <br>тратой времени на показ автомобиля и оформление<br> документов по продаже автомобиля с пробегом.</h5>
+                    <a  href="{% url 'services' %}" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -43,11 +41,11 @@
         <div class="search-box-4 sb-8">
             <form action="{% url 'search' %}" method="GET">
                 <div class="form-group">
-                    <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                    <input type="text" name="keyword" placeholder="Поиск модели" class="form-control">
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="model">
-                        <option selected="true" disabled="disabled">Model</option>
+                        <option selected="true" disabled="disabled">Модель</option>
                          {% for model in model_search %}
                          <!--all car models from db will be shown in dropdown-->
                           <option value="{{model}}">{{model}}</option>
@@ -56,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="city">
-                        <option selected="true" disabled="disabled">Location</option>
+                        <option selected="true" disabled="disabled">Город</option>
                          {% for city in city_search %}
                           <option value="{{city}}">{{city}}</option>
                           {% endfor %}
@@ -64,7 +62,7 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="year">
-                        <option selected="true" disabled="disabled">Year</option>
+                        <option selected="true" disabled="disabled">Год выпуска</option>
                           {% for year  in year_search %}
                           <option value="{{year}}">{{year}}</option>
                           {% endfor %}
@@ -72,20 +70,20 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="body_style">
-                        <option selected="true" disabled="disabled">Select Type Of Car</option>
+                        <option selected="true" disabled="disabled">Тип кузова</option>
                          {% for body_style in body_style_search  %}
                           <option value="{{body_style}}">{{body_style}}</option>
                           {% endfor %}
                     </select>
                 </div>
                 <div class="range-slider clearfix">
-                                <label>Price</label>
-                                <div data-min="0" data-max="150000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                <label>Цена</label>
+                                <div data-min="0" data-max="1500000"  data-min-name="min_price" data-max-name="max_price" data-unit="Руб" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                 <div class="clearfix"></div>
                             </div>
                 <div class="form-group">
                     <button class="btn btn-block button-theme btn-md">
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> Поиск
                     </button>
                 </div>
             </form>
@@ -112,8 +110,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Featured <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Рекомендуемые <span>Автомобили</span></h1>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
@@ -200,8 +198,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Latest <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Недавно <span>Добавленные</span></h1>
+           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
         </div>
         <div class="row">
             {% for car in all_cars %}
@@ -209,7 +207,7 @@
                 <div class="car-box">
                     <div class="car-thumbnail">
                         <a href="car-details.html" class="car-img">
-                            <div class="tag">For Sale</div>
+                            <div class="tag">Продаётся</div>
                             <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car"  style="min-height:262 px; max-height:262px">
                             <div class="facilities-list clearfix">
                                 <ul>
@@ -292,8 +290,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Executive <span>Team</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <h1>Наши <span>Сотрудники</span></h1>
+            <p>Наши сотрудники полностью отдают себя работе, для них нет невыполнимых задач.</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">

@@ -3,6 +3,7 @@ from .models import Team
 from django.utils.html import format_html
 # Register your models here.
 
+
 class TeamAdmin(admin.ModelAdmin): # team model in admin customization
       
      def thumbnail(self,object):
@@ -12,6 +13,6 @@ class TeamAdmin(admin.ModelAdmin): # team model in admin customization
      list_display_links =('id','thumbnail','first_name') #make id and first_name clickable
      search_fields =('first_name','last_name','designation') #search on these basis
      list_filter = ('designation',)  #filter on these basis
-admin.site.register(Team,TeamAdmin) 
+admin.site.register(Team,TeamAdmin)
 
 

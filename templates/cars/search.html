@@ -6,10 +6,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Search Results</h1>
+            <h1>Результаты поиска</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active">Search</li>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li class="active">Поиск</li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="model">
                                 
-                                    <option>Select Model</option>
+                                    <option>Выберите Модель</option>
                                     {% for model in model_search %}
                                      <option value="{{model}}">{{model}}</option>
                                     {% endfor %}
@@ -37,7 +37,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="city">
-                                 <option>Select City</option>
+                                 <option>Город удалить</option>
                                    {% for city in city_search %}
                                      <option value="{{city}}">{{city}}</option>
                                     {% endfor %}
@@ -47,7 +47,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="year">
-                                <option>Select Year</option>
+                                <option>Год выпуска</option>
                                    {% for year in year_search %}
                                      <option value="{{year}}">{{year}}</option>
                                     {% endfor %}
@@ -58,7 +58,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="body_style">
-                                     <option>Type Of Car</option>
+                                     <option>Тип кузова</option>
                                    {% for body_style in body_style_search %}
                                      <option value="{{body_style}}">{{body_style}}</option>
                                     {% endfor %}
@@ -71,7 +71,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="transmission">
-                                     <option>Transmission</option>
+                                     <option>Коробка передачь</option>
                                     {% for transmission in transmission_search %}
                                     <option value="{{transmission}}">{{transmission}}</option>
                                     {% endfor %}
@@ -81,7 +81,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <div class="range-slider">
-                                    <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                    <div data-min="0" data-max="1500000" data-unit="руб" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn btn-block button-theme btn-md" type="submit" >
-                                    <i class="fa fa-search"></i>Find
+                                    <i class="fa fa-search"></i>Поиск
                                 </button>
                             </div>
                         </div>

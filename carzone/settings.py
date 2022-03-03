@@ -91,9 +91,9 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join('carzone_db'),
+        'NAME': os.path.join('test'),
         'USER' :'postgres',
-        'PASSWORD' :'1wdpfoafii#R',
+        'PASSWORD' :'abkbggjd1',
         'HOST':'localhost',
     }
 }
@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 
 import _locale
