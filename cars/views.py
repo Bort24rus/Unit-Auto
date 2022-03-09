@@ -10,13 +10,13 @@ def cars(request):
      paged_cars=paginator.get_page(page)
 
      model_search=Car.objects.values_list('model', flat=True).distinct()
-     city_search=Car.objects.values_list('city',flat=True).distinct()
+   #  city_search=Car.objects.values_list('city',flat=True).distinct()
      year_search=Car.objects.values_list('year',flat=True).distinct()
      body_style_search=Car.objects.values_list('body_style',flat=True).distinct()
      data={
          'cars':paged_cars,
          'model_search':model_search,
-         'city_search':city_search,
+      #   'city_search':city_search,
          'year_search':year_search,
          'body_style_search':body_style_search,
      }
@@ -34,7 +34,7 @@ def car_detail(request,id):
 def search(request):
     cars=Car.objects.order_by('-created_date')
     model_search=Car.objects.values_list('model', flat=True).distinct()
-    city_search=Car.objects.values_list('city',flat=True).distinct()
+    #city_search=Car.objects.values_list('city',flat=True).distinct()
     year_search=Car.objects.values_list('year',flat=True).distinct()
     body_style_search=Car.objects.values_list('body_style',flat=True).distinct()
     transmission_search=Car.objects.values_list('transmission',flat=True).distinct()
@@ -47,10 +47,10 @@ def search(request):
         model = request.GET['model']
         if model:
             cars=cars.filter(model__iexact=model)
-    elif 'city' in request.GET:
-        city = request.GET['city']
-        if city:
-            cars=cars.filter(city__iexact=city)
+   # elif 'city' in request.GET:
+       # city = request.GET['city']
+     #   if city:
+        #    cars=cars.filter(city__iexact=city)
     elif 'year' in request.GET:
         year = request.GET['year']
         if year:
@@ -71,7 +71,7 @@ def search(request):
         'cars':cars,#This contains all those car object whose desc contain a keyword 'keyword' and model name from search sidebar on homepage
         #for sidebar search
          'model_search':model_search,
-         'city_search':city_search,
+        # 'city_search':city_search,
          'year_search':year_search,
          'body_style_search':body_style_search,
          'transmission_search':transmission_search,

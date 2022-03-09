@@ -12,7 +12,7 @@ class CarAdmin(admin.ModelAdmin):
       list_display_links =('id','thumbnail','car_title')
       list_editable=('is_featured',)
       search_fields=('id','car_title','model') #search box created which searches on mentioned fields
-      list_filter=('model','body_style','fuel_type','doors','state')
+      list_filter=('model','body_style','fuel_type','doors')
 
 admin.site.register(Car,CarAdmin) 
                     #Car--Model havin Car db tables

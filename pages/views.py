@@ -14,7 +14,7 @@ def home(request):
     #Fetch all distinct model,city,year, body style from Car Model/db
     #flat=True will fetch distinct values not tuples
     model_search=Car.objects.values_list('model', flat=True).distinct()
-    city_search=Car.objects.values_list('city',flat=True).distinct()
+    #city_search=Car.objects.values_list('city',flat=True).distinct()
     year_search=Car.objects.values_list('year',flat=True).distinct()
     body_style_search=Car.objects.values_list('body_style',flat=True).distinct()
     data = {
@@ -22,7 +22,7 @@ def home(request):
       'featured_cars':featured_cars, #passed data to template in form of dictionary having  key as variable name and value as objects from db
       'all_cars':all_cars,
       'model_search':model_search,
-      'city_search':city_search,
+      #'city_search':city_search,
       'year_search':year_search,
       'body_style_search':body_style_search,
       
