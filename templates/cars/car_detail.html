@@ -12,10 +12,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>{{single_car.car_title}}</h1>
+            <h1>{{single_car.car_title}} {{ single_car.model }}</h1>
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
-                <li class="active">{{single_car.car_title}}</li>
+                <li class="active">{{single_car.car_title}} {{ single_car.model }}</li>
             </ul>
         </div>
     </div>
@@ -31,13 +31,13 @@
                     <div class="heading-car clearfix">
                         {% include 'includes/messages.html' %}
                         <div class="pull-left">
-                            <h3>{{single_car.car_title}}</h3>
-                            <h6>
+                            <h3>{{single_car.car_title}} {{ single_car.model }}</h3>
+                           <!-- <h6>
                                 <i class="flaticon-pin"></i>{{single_car.city}} {{single_car.state}}
-                            </h6>
+                            </h6> -->
                         </div>
                         <div class="pull-right">
-                            <h3><span>${{single_car.price | intcomma}}</span></h3>
+                            <h3><span>{{single_car.price | intcomma}} ₽</span></h3>
                         </div>
                     </div>
                     <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
