@@ -164,18 +164,18 @@
                         <h1 class="title">
                             <a href="{% url 'car_detail' car.id %}">{{car.car_title}}</a>
                         </h1>
-                       <div class="location">
+                       <!--<div class="location">
                                 
                                     <i class="flaticon-pin"></i>{{car.state}},{{car.city}}
                                 
-                            </div>
+                            </div> -->
                     </div>
                     <div class="footer clearfix">
                         <div class="pull-left ratings days">
                             <p class="cartype">{{car.body_style}}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">${{car.price | intcomma}}</p>
+                            <p class="price">{{car.price | intcomma}} ₽</p>
                         </div>
                     </div>
                 </div>
